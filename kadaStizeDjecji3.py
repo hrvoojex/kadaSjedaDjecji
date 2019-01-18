@@ -28,9 +28,9 @@ for row in tableRows:
         myRow = row.text
 
 # Extract just a date from a searched row
-myReg = r'\d+\.\S+\.'     # \d+ - any number one or more times,
-reg = re.compile(myReg)    #  \. - point,
-myDate = reg.search(myRow)           # \S - non-whitespace character
+myReg = r'\d+\.\S+\.'       # \d+ - any number one or more times,
+reg = re.compile(myReg)     #  \. - point,
+myDate = reg.search(myRow)  # \S - non-whitespace character
 if myDate:
     print('Dječji sjeda: ', myDate.group())                      # \. - point
 else:
